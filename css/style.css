@@ -3,86 +3,276 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    list-style-type: none;
+    text-decoration: none;
 }
-
-body {
-    background-color: #f4f4f9;
-    color: #333;
-    line-height: 1.6;
+body{
+    background: radial-gradient(circle at top, #0f3a5f, #071a2d);
 }
+.cabecalho{
+    background: radial-gradient(circle at top, #0f3a5f, #071a2d);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    position: sticky; /* permite que o cabecalho fique fixo na tela*/
+    top: 0; 
+    z-index: 1;
 
-/* Navbar */
-.navbar {
-    background-color: #2c3e50;
-    color: white;
-    padding: 1rem 5%;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 }
-
-.logo {
-    font-size: 1.5rem;
+.cabecalho nav{
+    display: none;
+    background-color: rgba(0, 0, 0,0.9);
+}
+.logo{
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 24px;
+    color: #fff;
+    font-weight: bolder;
+}
+.btn-jogar{
+    display: none;
+}
+.icone{
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+nav a{
+    display: block;
+    padding: 15px 15px;
+    color: #fff;
+    text-transform: uppercase;
     font-weight: bold;
+    font-size: 15px;
+}
+
+nav.ativo{
+    display: initial;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    
+}
+nav a:hover{
+    
+    color:#ccc;
+}
+
+
+/* SECTION */
+
+section {
+  padding: 25px;
+  background-color: r;
+}
+section header p{
+    color: rgb(13, 217, 231);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 2px;
+    border: 1px solid aqua;
+    display: inline-block;
+    padding: 10px 30px 10px 30px;
+    margin-bottom: 10px;
+    
+}
+ #hero-titulo{
+    text-transform: uppercase;
+    font-size: 40px;
+    color: #fff;
+    font-weight: bolder;
+    margin-bottom: 20px;
+ }
+
+ .acoes{
+    margin: 20px 0px 20px 0px;
+    display: flex;
+    gap: 30px;
+ }
+ 
+  button{
+    padding: 10px 30px 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgb(17, 104, 218);
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 2px;
+    border: none;
+  }
+  .acoes a{
+    color: red;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 2px;
+    padding: 10px 30px 10px 30px;
+    border: 1px solid red;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .texto{
+    border: none;
+    color: #ccc;
+    text-transform: capitalize;
+
+    font-size: 15px;
+    letter-spacing: 2px;
+  }
+  .estatisticas{
+    margin: 20px 0px 20px 0px;
+    display: flex;
+    gap: 30px;
+  }
+  .estatisticas li{
+    color: #ccc;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+  .estatisticas li strong{
+    text-align: center;
+    display: block;
+    font-size: 20px;
+    color: #fff;
+  }
+  figure{
+    margin: 20px 0px 20px 0px;
+    width: 100%;
+  }
+  figure img{
+    width: 100%;
+  }
+
+  .mundo{
+    margin: 20px 0px 20px 0px;
+   
+  }
+  .mundo span{
+    color: rgb(35, 154, 175);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 2px;
+  }
+  .mundo h2{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  .mundo p{
+    color: #ccc;
+    text-transform: capitalize;
+    font-size: 15px;
+    letter-spacing: 2px;
+
+  }
+
+  .galeria {
+  list-style: none;
+  padding: 0;
+}
+
+.galeria li {
+  margin-bottom: 15px;
+}
+
+.galeria img {
+  width: 100%;
+  border-radius: 10px;
+}
+ol{
+    margin: 15px 0px 15px 0px;
+    color: #fff;
+    font-weight: bolder;
+    text-transform: capitalize;
+    font-size: 15px;
+    line-height: 2;
     letter-spacing: 2px;
 }
 
-/* Layout Geral */
-.container {
-    max-width: 1100px;
-    margin: 2rem auto;
-    padding: 0 20px;
+.galeria {
+  list-style: none;
+  padding: 0;
+}
+#galeria-titulo{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 35px;
+    margin-bottom: 20px;
 }
 
-section {
-    margin-bottom: 4rem;
+.galeria li {
+  margin-bottom: 15px;
 }
 
-h1, h2 {
-    margin-bottom: 1.5rem;
-    color: #2c3e50;
-}
-
-/* Galeria com Grid */
-.grid-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.card {
-    background: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-.card img {
+figure{
+    margin-top: 70px;
+   position: relative;
+    bottom: 30px;
     width: 100%;
-    display: block;
+   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+}
+    
+figcaption{
+   
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    padding: 0px 25px 20px 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 2px;
+  
+}
+#equipe-titulo{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+.equipe {
+  list-style: none;
+  padding: 0;
 }
 
-.card-info {
-    padding: 15px;
+.equipe li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+    background-color: #0f3a5f;
+    padding: 30px;
+    width: 100%;
+   
+}
+.equipe article{
+    background: #fff;
+    padding: 50px 20px 50px 20px;
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+    
 }
 
-/* Equipe */
-.team-list {
-    background: #e9ecef;
-    padding: 20px;
-    border-radius: 8px;
+.equipe article {
+  
 }
 
-.member {
-    padding: 10px 0;
-    border-bottom: 1px solid #ccc;
-}
 
-.member:last-child {
-    border-bottom: none;
-}
