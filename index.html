@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="css/style.css" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
   <body>
-    <header class="cabecalho">
+    <header class="cabecalho" >
       <p class="logo">Jogo.Acadêmico</p>
       <div class="icone" id="btn-menu">
         <i class="fa-solid fa-bars"></i>
@@ -18,10 +20,9 @@
 
       <nav aria-label="Menu principal" id="menu">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Mundo</a></li>
-          <li><a href="#">Galeria</a></li>
-          <li><a href="#">Equipe</a></li>
+          <li><a href="#home">Home</a></li> 
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#participantes">Equipe</a></li>
         </ul>
       </nav>
     
@@ -31,8 +32,9 @@
 
     <main>
       <!-- HERO -->
-      <section aria-labelledby="hero-titulo">
-        <header>
+      <section aria-labelledby="hero-titulo" id="home"  >
+        <header  data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom">
           <p><strong>Lançamento:</strong> 2026</p>
           <h1 id="hero-titulo">Jogo Estudante Acadêmico</h1>
           <p class="texto">
@@ -41,12 +43,12 @@
           </p>
         </header>
 
-        <div class="acoes">
+        <div class="acoes" data-aos="fade-right">
           <button type="button">▶ Jogar</button>
           <a href="#">▶ Assistir Trailer</a>
         </div>
 
-        <ul class="estatisticas">
+        <ul class="estatisticas" data-aos="fade-right">
           <li>
             <strong>+12M</strong>
             <span>Jogadores</span>
@@ -61,18 +63,18 @@
           </li>
         </ul>
 
-        <figure>
+        <figure data-aos="fade-right">
           <img src="img/player.png" alt="Cena do jogo acadêmico" />
         </figure>
       </section>
 
       <!-- MUNDO -->
       <section class="mundo">
-        <figure>
+        <figure data-aos="fade-right">
           <img src="img/professor_chefao.png" alt="Ambiente do mundo do jogo" />
         </figure>
 
-        <div>
+        <div data-aos="fade-right">
           <p><span>O mundo</span></p>
           <h2 id="mundo-titulo">Bem-vindo ao Jogo Acadêmico</h2>
           <p>
@@ -89,12 +91,12 @@
       </section>
 
       <!-- GALERIA -->
-      <section aria-labelledby="galeria-titulo">
+      <section aria-labelledby="galeria-titulo" id="galeria">
         <h2 id="galeria-titulo">Capturas in-game</h2>
 
-        <ul class="galeria">
+        <ul class="galeria" data-aos="fade-right">
           <li>
-            <figure>
+            <figure data-aos="fade-right">
               <img src="img/Movimento_Player.png" alt="Rua neon no distrito Kabuki à noite" />
               <figcaption>
                 <span>Distrito Kabuki</span>
@@ -104,7 +106,7 @@
           </li>
 
           <li>
-            <figure>
+            <figure data-aos="fade-right">
               <img
                 src="img/ZombieDoSono-removebg-preview.png"
                 alt="Arena com chefe gigante sob luz vermelha"
@@ -117,7 +119,7 @@
           </li>
 
           <li>
-            <figure>
+            <figure data-aos="fade-right">
               <img
                 src="img/Caneca_Cafe.png"
                 alt="Personagem nos telhados futuristas"
@@ -132,48 +134,52 @@
       </section>
 
       <!-- EQUIPE -->
-      <section aria-labelledby="equipe-titulo">
+      <section id="participantes ">
         <h2 id="equipe-titulo">Equipe</h2>
 
         <ul class="equipe">
-          <li>
+          <li data-aos="fade-right">
             <article>
               <header>
-                <h3>Lucas Almeida</h3>
+                 <p>ID: 1002</p>
+               
               </header>
+              <h3>Lucas Silva</h3>
               <p class="cargo">Lead Developer</p>
               <p class="ra">RA 2024001</p>
             </article>
           </li>
 
-          <li>
+          <li data-aos="fade-right">
             <article>
               <header>
                 <p>ID: 1002</p>
-                <h3>Mariana Costa</h3>
+                
               </header>
+              <h3>Mariana Costa</h3>
               <p class="cargo">Game Designer</p>
               <p class="ra">RA 2024002</p>
             </article>
           </li>
 
-          <li>
+          <li data-aos="fade-right">
             <article>
               <header>
                 <p>ID: 1003</p>
-                <h3>Rafael Souza</h3>
+                
               </header>
+              <h3>Rafael Souza</h3>
               <p class="cargo">Pixel Artist</p>
               <p class="ra">RA 2024003</p>
             </article>
           </li>
 
-          <li>
+          <li data-aos="fade-right">
             <article>
               <header>
-                <p>ID: 1004</p>
-                <h3>Beatriz Lima</h3>
+                <p>ID: 1004</p>  
               </header>
+              <h3>Beatriz Lima</h3>
               <p class="cargo">Sound Designer</p>
               <p class="ra">RA 2024004</p>
             </article>
@@ -182,11 +188,13 @@
       </section>
     </main>
 
-    <footer>
+    <footer data-aos="fade-right">
       <p>© 2026 Jogo Acadêmico</p>
     </footer>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+    </script>
     <script src="script.js"></script>
+   
   </body>
 </html>
 

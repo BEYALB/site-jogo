@@ -4,3 +4,5 @@
   btn.addEventListener("click", () => {
     menu.classList.toggle("ativo");
   });
+
+    AOS.init();

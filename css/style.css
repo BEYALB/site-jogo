@@ -8,7 +8,21 @@
     text-decoration: none;
 }
 body{
-    background: radial-gradient(circle at top, #0f3a5f, #071a2d);
+   background-image: url(../img/img-fundo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    animation: moverFundo 20s infinite alternate;
+}
+
+@keyframes moverFundo {
+  0%{
+    background-position:left center;
+  }
+  100%{
+    background-position: right center;
+  }
 }
 .cabecalho{
     background: radial-gradient(circle at top, #0f3a5f, #071a2d);
@@ -244,37 +258,112 @@ figcaption{
     font-size: 35px;
     margin-bottom: 20px;
 }
-.equipe {
-  list-style: none;
-  padding: 0;
+.equipe li{
+   background: #050a18;
+  padding: 20px;
+  border: 1px solid #0f3a5f;
+  border-radius: 6px;
+  margin-top: 20px;
+}
+.equipe header{
+    height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  background: linear-gradient(
+    135deg,
+    #0f3a5f,
+    #1a1a2e,
+    #5f0f2e
+  );
+
+  border: 1px solid #0f3a5f;
+}
+.equipe header p{
+  font-size: 48px;
+  font-weight: bold;
+  color: #cfd8dc;
+  letter-spacing: 2px;
+  border: none;
 }
 
-.equipe li {
+.equipe h3 {
+  margin-top: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+.cargo {
+  color: #ff2e2e;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.ra {
+  color: #aaa;
+  font-size: 15px;
+}
+
+
+@media (min-width: 1024px) {
+
+  main {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .galeria {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .equipe {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .icone{
+    display: none;
+  }
+  .cabecalho nav{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 10px;
-     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
-    margin-bottom: 15px;
-    background-color: #0f3a5f;
-    padding: 30px;
-    width: 100%;
-   
-}
-.equipe article{
-    background: #fff;
-    padding: 50px 20px 50px 20px;
-    width: 90%;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
-    margin-bottom: 15px;
+    justify-content: space-between;
+     background-color: transparent;
+  }
+  
+ 
+  #menu li{
+    display: inline-block;
+    padding: 10px 20px ;
     
+  }
+ 
+  #menu li a{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+  main{
+    max-width: 750px;
+    margin: auto;
+  }
 }
+@media (min-width: 1024px) {
 
-.equipe article {
+  main {
+    padding-top:50px;
+    max-width: 1200px;
+    border: 2px solid red;
+    margin: auto;
+  }
+ img {
+  max-width: 80%;
+ 
+ 
+}
   
 }
-
-
->>>>>>> projeto
