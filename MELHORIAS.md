@@ -73,8 +73,4 @@
 - **Desktop**: 1024px - 1439px
 - **Ultra Wide**: 1440px+
 
-## 🎯 Próximas Sugestões (Opcional)
-- Adicionar dark mode toggle
-- Implementar lazy loading nas imagens
-- Adicionar animations AOS em elementos desktop
-- Criar variações de tema (cyberpunk, neon, etc)
+
