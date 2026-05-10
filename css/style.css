@@ -9,7 +9,7 @@
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth;  /* para um scroll suave entere as seções  e não pulo instantâneamente */
 }
 
 body {
@@ -41,7 +41,8 @@ body {
     z-index: 1000;
     border-bottom: 2px solid #0dd9e7;
     box-shadow: 0 4px 15px rgba(13, 217, 231, 0.2);
-    flex-wrap: wrap;
+    /*  wrap serve para quando não houver mais espaco na tela ele quebra e manda para baixo */
+    flex-wrap: wrap;  
 }
 
 .cabecalho nav {
@@ -60,6 +61,7 @@ body {
 }
 
 .logo:hover {
+  /*  shadow colocar dupla sombra e transform faz a animação  ela vai aumetar  */
     text-shadow: 0 0 20px rgba(13, 217, 231, 1), 0 0 30px rgba(255, 50, 50, 0.5);
     transform: scale(1.05);
 }
